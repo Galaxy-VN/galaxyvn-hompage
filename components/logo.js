@@ -18,8 +18,6 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const footPrintImg = `/footprint.png`
-
     return (
         <Link href="/" scroll={false}>
             <LogoBox>
