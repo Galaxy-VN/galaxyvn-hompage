@@ -1,4 +1,4 @@
-const FootprintIcon = props => {
+const GalaxyIcon = props => {
     return (
       <svg
         width={20}
@@ -25,4 +25,4 @@ const FootprintIcon = props => {
     )
   }
   
-  export default FootprintIcon
+  export default GalaxyIcon
