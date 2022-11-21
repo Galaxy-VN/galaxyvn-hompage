@@ -1,19 +1,34 @@
+import NextLink from 'next/link'
 import {
+  Link,
   Container,
   Heading,
   Box,
+  List,
+  ListItem,
   useColorModeValue,
-  chakra
+  chakra,
+  Button,
+  SimpleGrid
 } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
+import Layout from '../components/layouts/article'
+import Section from '../components/section'
+import { GridItem } from '../components/grid-item'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import thumbYouTube from '../public/images/works/thumb_1.jpg'
+import thumbNijigen from '../public/images/works/thumb_0.jpg'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
-    shouldForwardProp: prop => ['width', 'height', 'src', 'alt', "marginBottom"].includes(prop)
+    shouldForwardProp: prop => ['width', 'height', 'style', 'sizes', 'src', 'alt'].includes(prop)
 })
 
   
-const Page = () => {
-    return (
+const Home = () => (
+    <Layout>
         <Container>
             <Box 
                 borderRadius="lg" 
@@ -31,7 +46,7 @@ const Page = () => {
                     <Heading as="h2" variant="page-title">
                         GalaxyVN
                     </Heading>
-                    <p>Editor / Developer / Designer</p>
+                    <p>Sakai GalaxyVN (Developer / Editor / Designer)</p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -53,15 +68,116 @@ const Page = () => {
                             src="/images/profile.jpg"
                             alt="Profile image"
                             borderRadius="full"
-                            width="95"
-                            height="95"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            style={{ width: 'auto', height: 'auto' }}
                         />
                     </Box>
                 </Box>
             </Box>
+            <Section delay={0.1}>
+                <Heading as="h3" variant="section-title">
+                    Work
+                </Heading>
+                <Paragraph>
+                    I&apos;m a freelancer developer and still learn for full-stack 
+                    developer. Currently i am still a student at high school about
+                    to graduate and working on product called{' '}
+                    <NextLink href="/works/nijigen-website">
+                        <Link>Nijigen Website</Link>
+                    </NextLink>
+                    {' '}(fansite).
+                    <Box align="center" my={4}>
+                        <NextLink href="/works">
+                            <Button 
+                                rightIcon={<ChevronRightIcon />}
+                                colorScheme="teal"
+                            >
+                                My Stupid Portfolio
+                            </Button>
+                        </NextLink>
+                    </Box>
+                </Paragraph>
+            </Section>
+            <Section delay={0.2}>
+                <Heading as="h3" variant="section-title">
+                    Bio
+                </Heading>
+                <BioSection>
+                    <BioYear>2005</BioYear>
+                    Born in Ho Chi Minh City, Viet Nam
+                </BioSection>
+                <BioSection>
+                    <BioYear>2019</BioYear>
+                    Graduated from secondary school
+                </BioSection>
+                <BioSection>
+                    <BioYear>2020 to present</BioYear>
+                    Learning as a high school student
+                </BioSection>
+            </Section>
+            <Section delay={0.3}>
+                <Heading as="h3" variant="section-title">
+                    On The Web
+                </Heading>
+                <List>
+                    <ListItem>
+                        <Link href="https://github.com/galaxy-vn" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoGithub />}
+                            >
+                                @galaxy-vn
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://twitter.com/galaxyvn_dev" target="__blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoTwitter />}
+                            >
+                                @galaxyvn_dev
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://www.instagram.com/galaxyvn.dev/" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoInstagram />}
+                            >
+                                @galaxyvn.dev
+                            </Button>
+                        </Link>
+                    </ListItem>
+                </List>
+
+                <SimpleGrid columns={[1, 2, 2]} gap={6}>
+                <GridItem
+                    href="https://www.youtube.com/channel/UCKgGqDMob1OL7vCjAWaFhOw"
+                    title="GalaTriVN 清志銀河"
+                    thumbnail={thumbYouTube}
+                >
+                    My YouTube channel
+                </GridItem>
+                <GridItem
+                    href="https://unofficial-nijigen.camchua.moe/"
+                    title="Nijigen Website"
+                    thumbnail={thumbNijigen}
+                >
+                    A fansite i write when i was free
+                </GridItem>
+                </SimpleGrid>
+            </Section>
         </Container>
-    )
-}
+    </Layout>
+)
 
 
-export default Page
+export default Home
+export { getServerSideProps } from '../components/chakra'

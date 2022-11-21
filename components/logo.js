@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import { GiGalaxy } from "react-icons/gi";
 import styled from '@emotion/styled'
+import Galaxy from '../components/icons/galaxy'
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -21,7 +22,7 @@ const Logo = () => {
     return (
         <Link href="/" scroll={false}>
             <LogoBox>
-                    <GiGalaxy />
+                    <GiGalaxy/>
                     <Text 
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                         fontFamily='M PLUS Rounded 1c", sans-serif'
