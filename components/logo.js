@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import { GiGalaxy } from "react-icons/gi";
 import styled from '@emotion/styled'
-import Galaxy from '../components/icons/galaxy'
 
 const LogoBox = styled.span`
     font-weight: bold;
