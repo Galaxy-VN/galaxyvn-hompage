@@ -42,7 +42,7 @@ const VoxelGlobe = () => {
             refRenderer.current = renderer
             const scene = new THREE.Scene()
 
-            const target = new THREE.Vector3(0, -0.3, 0)
+            const target = new THREE.Vector3(0, -0.28, 0)
             const initialCameraPosition = new THREE.Vector3(
                 20 * Math.sin(0.2 * Math.PI),
                 10,
