@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import VoxelBlockLoader from "../voxel-block-loader";
+import {Footer} from "../footer";
 
 const LazyVoxelBlock = dynamic(() => import('../voxel-block'), {
     ssr: false,
@@ -25,6 +26,8 @@ const Main = ({children, router}) => {
                 <meta property="og:site_name" content="GalaxyVN" />
                 <meta name="og:title" content="GalaxyVN" />
                 <meta property="og:type" content="website" />
+                <meta property="og:image" content="/favicon.ico" />
+                <meta property="og:image:alt" content="avt" />
                 <title>GalaxyVN - Homepage</title>
             </Head>
 
@@ -32,7 +35,10 @@ const Main = ({children, router}) => {
 
             <Container maxW="container.md" pt={14}>
                 <LazyVoxelBlock />
+
                 {children}
+
+                <Footer />
             </Container>
         </Box> 
     )

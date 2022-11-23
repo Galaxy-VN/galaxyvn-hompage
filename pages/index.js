@@ -18,7 +18,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoFacebook } from 'react-icons/io5'
-import thumbYouTube from '../public/images/works/thumb_1.jpg'
+import thumbYouTube from '../public/images/links/youtube.jpg'
 import thumbNijigen from '../public/images/works/thumb_0.jpg'
 import Image from 'next/image'
 
