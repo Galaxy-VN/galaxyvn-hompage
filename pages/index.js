@@ -17,7 +17,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoFacebook } from 'react-icons/io5'
 import thumbYouTube from '../public/images/works/thumb_1.jpg'
 import thumbNijigen from '../public/images/works/thumb_0.jpg'
 import Image from 'next/image'
@@ -71,7 +71,7 @@ const Home = () => (
                             width="0"
                             height="0"
                             sizes="100vw"
-                            style={{ width: 'auto', height: 'auto' }}
+                            style={{ width: '100%', height: '100%' }}
                         />
                     </Box>
                 </Box>
@@ -90,7 +90,7 @@ const Home = () => (
                     {' '}(fansite).
                     <Box align="center" my={4}>
                         <NextLink href="/works">
-                            <Button 
+                            <Button
                                 rightIcon={<ChevronRightIcon />}
                                 colorScheme="teal"
                             >
@@ -155,6 +155,17 @@ const Home = () => (
                             </Button>
                         </Link>
                     </ListItem>
+                    <ListItem>
+                        <Link href="https://www.facebook.com/galaxyvn.dev/" target={"_blank"}>
+                            <Button
+                                variant={"ghost"}
+                                colorScheme={"teal"}
+                                leftIcon={<IoLogoFacebook />}
+                            >
+                                Pham Gia Huy
+                            </Button>
+                        </Link>
+                    </ListItem>
                 </List>
 
                 <SimpleGrid columns={[1, 2, 2]} gap={6}>
@@ -170,7 +181,7 @@ const Home = () => (
                     title="Nijigen Website"
                     thumbnail={thumbNijigen}
                 >
-                    A fansite i write when i was free
+                    A fansite I write
                 </GridItem>
                 </SimpleGrid>
             </Section>
