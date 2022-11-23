@@ -46,7 +46,7 @@ const Home = () => (
                     <Heading as="h2" variant="page-title">
                         GalaxyVN
                     </Heading>
-                    <p>Sakai GalaxyVN (Developer / Editor / Designer)</p>
+                    <p>GalaxyVN (Developer / Editor / Designer)</p>
                 </Box>
                 <Box
                     flexShrink={0}

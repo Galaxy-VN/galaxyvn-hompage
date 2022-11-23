@@ -2,11 +2,11 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
-import VoxelGlobeLoader from "../voxel-globe-loader";
+import VoxelMoonLoader from "../voxel-moon-loader";
 
-const LazyVoxelGlobe = dynamic(() => import('../voxel-globe'), {
+const LazyVoxelMoon = dynamic(() => import('../voxel-moon'), {
     ssr: false,
-    loading: () => <VoxelGlobeLoader />
+    loading: () => <VoxelMoonLoader />
 })
 
 const Main = ({children, router}) => {
@@ -31,8 +31,7 @@ const Main = ({children, router}) => {
             <NavBar path={router.asPath} />
 
             <Container maxW="container.md" pt={14}>
-                <LazyVoxelGlobe />
-
+                <LazyVoxelMoon />
                 {children}
             </Container>
         </Box> 
