@@ -3,7 +3,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbNijigen from '../public/images/works/thumb_0.jpg'
+import thumbNijigen from '../public/images/works/nijigen.jpg'
+import thumbPotato from '../public/images/works/potato.jpg'
 
 const Works = () => (
     <Layout title="Works">
@@ -12,10 +13,15 @@ const Works = () => (
                 Works
             </Heading>
 
-            <SimpleGrid column={[1,2,2]} gap={6}>
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
                 <Section>
-                    <WorkGridItem id="nijigen-website" title="Nijigen Website" thumbnail={thumbNijigen}>
-                        A fansite i write when i was free (Will write again when i have time).
+                    <WorkGridItem id="nijigen" title="Nijigen Website" thumbnail={thumbNijigen}>
+                        A fansite I write in summer.
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem id={"potato"} title={"Potato"} thumbnail={thumbPotato}>
+                        Forking potatoes is an ancient and well-mannered tradition.
                     </WorkGridItem>
                 </Section>
             </SimpleGrid>
