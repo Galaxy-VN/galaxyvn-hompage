@@ -4,6 +4,8 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbNijigen from '../public/images/works/nijigen.jpg'
+import thumbOregen3 from '../public/images/works/oregen3.jpg'
+import thumbChemdah from '../public/images/works/chemdah.png'
 import thumbPotato from '../public/images/works/potato.jpg'
 
 const Works = () => (
@@ -15,8 +17,18 @@ const Works = () => (
 
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
                 <Section>
-                    <WorkGridItem id="nijigen" title="Nijigen Website" thumbnail={thumbNijigen}>
+                    <WorkGridItem id={"nijigen"} title={"Nijigen Website"} thumbnail={thumbNijigen}>
                         A fansite I write in summer.
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem id={"oregen"} title={"Oregen"} thumbnail={thumbOregen3}>
+                        The next generation of Oregen recoded.
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem id={"chemdah"} title={"Chemdah"} thumbnail={thumbChemdah}>
+                        Powerful plugin for creating quests
                     </WorkGridItem>
                 </Section>
                 <Section>
