@@ -7,8 +7,9 @@ import {
     List,
     ListItem,
     useColorModeValue,
+    chakra,
     Button,
-    SimpleGrid, Avatar
+    SimpleGrid
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -19,6 +20,11 @@ import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoFacebook } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.jpg'
 import thumbNijigen from '../public/images/works/nijigen.jpg'
+import Image from 'next/image'
+
+const ProfileImage = chakra(Image, {
+    shouldForwardProp: prop => ['width', 'height', 'style', 'sizes', 'src', 'alt'].includes(prop)
+})
 
 const Home = () => (
     <Layout>
@@ -57,10 +63,14 @@ const Home = () => (
                         borderRadius="full"
                         overflow="hidden"
                     >
-                        <Avatar
-                            size={"auto"}
-                            name="Profile Image"
+                        <ProfileImage
                             src="/images/profile.jpg"
+                            alt="Profile image"
+                            borderRadius="full"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            style={{ width: '100%', height: '100%' }}
                         />
                     </Box>
                 </Box>

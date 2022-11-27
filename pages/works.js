@@ -5,7 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbNijigen from '../public/images/works/nijigen.jpg'
 import thumbOregen3 from '../public/images/works/oregen3.jpg'
-import thumbChemdah from '../public/images/works/chemdah.png'
+import thumbNextjs from '../public/images/works/next-js.png'
 import thumbPotato from '../public/images/works/potato.jpg'
 
 const Works = () => (
@@ -27,8 +27,8 @@ const Works = () => (
                     </WorkGridItem>
                 </Section>
                 <Section>
-                    <WorkGridItem id={"chemdah"} title={"Chemdah"} thumbnail={thumbChemdah}>
-                        Powerful plugin for creating quests
+                    <WorkGridItem id={"nextjs"} title={"Next.js"} thumbnail={thumbNextjs}>
+                        Dynamic without limits
                     </WorkGridItem>
                 </Section>
                 <Section>
