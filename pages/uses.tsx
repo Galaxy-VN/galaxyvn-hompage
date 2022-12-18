@@ -1,7 +1,7 @@
 import {Container, Heading, SimpleGrid} from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section"
-import {UseGridItem} from "../components/grid-item";
+import { UseGridItem } from "../components/grid-item";
 
 import thumbnailKeyboard from "../public/images/uses/keyboard-akko-3084b-plus.png"
 import thumbnailLaptop from "../public/card.png"
