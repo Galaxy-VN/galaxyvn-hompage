@@ -22,7 +22,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
+  <Box w="100%" textAlign="center" role={"group"}>
     <NextLink href={`/works/${id}`} passHref scroll={false}>
       <LinkBox cursor="pointer">
         <Image
@@ -40,6 +40,27 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
       </LinkBox>
     </NextLink>
   </Box>
+)
+
+export const UseGridItem = ({ children, id, title, thumbnail }) => (
+    <Box w={"100%"} textAlign={"center"} role={"group"}>
+        <NextLink href={`/uses/${id}`} passHref scroll={false}>
+            <LinkBox cursor={"pointer"}>
+                <Image
+                    src={thumbnail}
+                    alt={title}
+                    className="grid-item-thumbnail"
+                    placeholder="blur"
+                />
+                <LinkOverlay href={`/uses/${id}`}>
+                    <Text mt={2} fontSize={20}>
+                        {title}
+                    </Text>
+                </LinkOverlay>
+                <Text fontSize={14}>{children}</Text>
+            </LinkBox>
+        </NextLink>
+    </Box>
 )
 
 export const GridItemStyle = () => (

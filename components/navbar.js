@@ -77,6 +77,9 @@ const Navbar = props => {
             <LinkItem href="/posts" path={path}>
               Posts
             </LinkItem>
+            <LinkItem href="/uses" path={path}>
+              Uses
+            </LinkItem>
             <LinkItem
                 target="_blank"
                 href="https://github.com/galaxy-vn"
@@ -111,6 +114,9 @@ const Navbar = props => {
                   </NextLink>
                   <NextLink href="/posts" passHref>
                     <MenuItem as={Link}>Posts</MenuItem>
+                  </NextLink>
+                  <NextLink href={"/uses"} passHref>
+                    <MenuItem as={Link}>Uses</MenuItem>
                   </NextLink>
                   <MenuItem
                       as={Link}

@@ -4,12 +4,12 @@ import {
     Container,
     Heading,
     Box,
+    SimpleGrid,
+    Button,
     List,
     ListItem,
     useColorModeValue,
-    chakra,
-    Button,
-    SimpleGrid
+    chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
