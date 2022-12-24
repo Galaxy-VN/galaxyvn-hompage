@@ -4,7 +4,8 @@ import Section from "../components/section"
 import { UseGridItem } from "../components/grid-item";
 
 import thumbnailKeyboard from "../public/images/uses/keyboard-akko-3084b-plus.png"
-import thumbnailLaptop from "../public/card.png"
+import thumbnailLaptop from "../public/images/uses/laptop-gaming.png"
+import thumbnailMouse from "../public/card.png"
 
 const Uses = () => (
     <Layout title={"Uses"}>
@@ -28,6 +29,13 @@ const Uses = () => (
                         thumbnail={thumbnailLaptop}
                     >
                         Laptop gaming
+                    </UseGridItem>
+                    <UseGridItem
+                      id={"mouse"}
+                      title={"MSI Gaming Mouse"}
+                      thumbnail={thumbnailMouse}
+                    >
+                        Gaming Mouse
                     </UseGridItem>
                 </SimpleGrid>
             </Section>

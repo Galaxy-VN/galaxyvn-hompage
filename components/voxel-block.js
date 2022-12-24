@@ -71,7 +71,7 @@ const VoxelBlock = () => {
 
             loadGLTFModel(scene, urlLaptopGLB, {
                 receiveShadow: false,
-                castShadow: false
+                castShadow: false,
             }).then(() => {
                 animate()
                 setLoading(false)
