@@ -37,6 +37,13 @@ const Uses = () => (
                     >
                         Gaming Mouse
                     </UseGridItem>
+                    <UseGridItem
+                      id={"headphone"}
+                      title={"Headphone"}
+                      thumbnail={thumbnailMouse}
+                    >
+                      Headphone
+                    </UseGridItem>
                 </SimpleGrid>
             </Section>
         </Container>
