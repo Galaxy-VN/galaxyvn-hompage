@@ -45,7 +45,7 @@ const Home = () => (
                     <Heading as="h2" variant="page-title">
                         GalaxyVN
                     </Heading>
-                    <p>GalaxyVN (Developer / Editor / Designer)</p>
+                    <p>Kazagi GalaxyVN (Developer / Editor / Designer)</p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -82,11 +82,7 @@ const Home = () => (
                 <Paragraph>
                     I&apos;m a freelancer developer and still learn for full-stack 
                     developer. Currently i am still a student at high school about
-                    to graduate and working on product called{' '}
-                    <NextLink href="/works/nijigen-website">
-                        <Link>Nijigen Website</Link>
-                    </NextLink>
-                    {' '}(fansite).
+                    to graduate.
                     <Box align="center" my={4}>
                         <NextLink href="/works">
                             <Button
