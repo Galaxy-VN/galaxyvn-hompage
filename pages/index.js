@@ -80,8 +80,9 @@ const Home = () => (
                     Work
                 </Heading>
                 <Paragraph>
-                    I&apos;m a freelancer developer and still learn for full-stack 
-                    developer.
+                    I&apos;m a freelancer developer and still learn for full-stack
+                    developer. Feel free to check out my work that is motivation of 
+                    me.
                     <Box align="center" my={4}>
                         <NextLink href="/works">
                             <Button
@@ -107,7 +108,7 @@ const Home = () => (
                     Graduated from secondary school
                 </BioSection>
                 <BioSection>
-                    <BioYear>2020 to 2024</BioYear>
+                    <BioYear>2024</BioYear>
                     Graduated from high school
                 </BioSection>
                 <BioSection>
