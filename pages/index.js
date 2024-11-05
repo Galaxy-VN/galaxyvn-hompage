@@ -37,7 +37,7 @@ const Home = () => (
                 bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
                 css={{ backdropFilter: 'blur(10px)' }}
             >
-                Hello, I&apos;m a senior high school student and backend developer in Vietnam!
+                Hello, I&apos;m a second-year student and backend developer in Vietnam!
             </Box>
 
             <Box display={{md:'flex'}}>
@@ -64,7 +64,7 @@ const Home = () => (
                         overflow="hidden"
                     >
                         <ProfileImage
-                            src="/images/profile.jpg"
+                            src="/images/profile.png"
                             alt="Profile image"
                             borderRadius="full"
                             width="0"
@@ -81,8 +81,7 @@ const Home = () => (
                 </Heading>
                 <Paragraph>
                     I&apos;m a freelancer developer and still learn for full-stack 
-                    developer. Currently i am still a student at high school about
-                    to graduate.
+                    developer.
                     <Box align="center" my={4}>
                         <NextLink href="/works">
                             <Button
@@ -108,8 +107,12 @@ const Home = () => (
                     Graduated from secondary school
                 </BioSection>
                 <BioSection>
-                    <BioYear>2020 to present</BioYear>
-                    Learning as a high school student
+                    <BioYear>2020 to 2024</BioYear>
+                    Graduated from high school
+                </BioSection>
+                <BioSection>
+                    <BioYear>2024 to present</BioYear>
+                    Learning...
                 </BioSection>
             </Section>
             <Section delay={0.3}>
